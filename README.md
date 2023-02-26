@@ -30,3 +30,7 @@ const [counter,setCounter] = React.useState(0);
 - 위의 코드에서 counter는 현재 값 state고, setCounter는 이벤트 발생 시 변화를 주는 부분이며 이후 counter로 다시 저장된다.
 
 - react는 실제로 바뀌는 값이 있으면 그 컴포넌트 자체가 리렌더링된다. (불필요한 리렌더링 제외하고)
+
+- state를 세팅하는 방법으로 2가지가 있는데, 첫번째로는 직접 할당하는 방법 : setState(state+1), 두번째로는 함수를 할당하는 방법 : setState(state=>state+1)
+
+- 함수로 할당하는 방법이 더 안전하다.
