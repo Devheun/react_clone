@@ -34,3 +34,7 @@ const [counter,setCounter] = React.useState(0);
 - state를 세팅하는 방법으로 2가지가 있는데, 첫번째로는 직접 할당하는 방법 : setState(state+1), 두번째로는 함수를 할당하는 방법 : setState(state=>state+1)
 
 - 함수로 할당하는 방법이 더 안전하다.
+
+- react에서 jsx를 사용하면서 return 문을 사용할 때 최상위 태그가 있어야한다!
+
+- react에서 중괄호 속에 js 작성할 수 있다.
