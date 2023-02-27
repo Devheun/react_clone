@@ -38,3 +38,22 @@ const [counter,setCounter] = React.useState(0);
 - react에서 jsx를 사용하면서 return 문을 사용할 때 최상위 태그가 있어야한다!
 
 - react에서 중괄호 속에 js 작성할 수 있다.
+
+- props 를 이용하여 컴포넌트에 속성을 전달해 줄 수 있다.
+
+- props는 객체로, 구조분해 할당을 이용해 사용하면 편리하다.
+
+- props에 function도 보낼 수 있다. (주의점 : 이벤트 리스너를 props로 보내도 그저 props일 뿐, 이벤트리스너의 효과는 없다!)
+
+- 불필요한 re-rendering은 React.memo()로 관리할 수 있다 (Effective!)
+
+- react는 props에 파라미터를 잘못 넘겨도 확인할 수 없기때문에  PropTypes 모듈이 존재한다.
+
+```
+MemoryBtn.propTypes = {
+    text: PropTypes.string.isRequired,
+    fontsize: PropTypes.number,
+  };
+```
+
+- 위의 코드처럼 string, number 등 타입을 확인하고 다르면 콘솔에 warning을 뜨게할 수 있고, isRequired를 이용하여 값이 입력되지 않았을 경우도 warning을 뜨게할 수 있다.
