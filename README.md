@@ -57,3 +57,11 @@ MemoryBtn.propTypes = {
 ```
 
 - 위의 코드처럼 string, number 등 타입을 확인하고 다르면 콘솔에 warning을 뜨게할 수 있고, isRequired를 이용하여 값이 입력되지 않았을 경우도 warning을 뜨게할 수 있다.
+
+- create-react-app을 이용하면 1개의 컴포넌트당 하나의 js파일을 가질 수 있어 모듈화가 가능함.
+
+- 컴포넌트별 스타일은 .module.css 파일을 생성하여 import 후 사용할 수 있다. (css 코드를 자바스크립트 객체로 변환시켜준다.)
+
+- 여기서 말하는 스타일은 className이나 id로 import한 스타일 객체의 property를 전달하여 적용된다.
+
+- 스타일이 적용된 컴포넌트를 확인해보면 무작위의 className이나 id가 붙는데, 이는 일일이 .css 파일의 className이나 id를 기억할 필요가 없다는 말!
