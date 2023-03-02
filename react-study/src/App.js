@@ -1,34 +1,38 @@
+import {useState} from "react";
 
-import Button from "./Button";
-import styles from "./App.module.css";
-import {useState,useEffect} from "react";
+function App(){
+	
+	const [todo,setTodo] = useState("");
+	const [todos,setTodos] = useState([]);
+	
+	const onChange=(event)=>setTodo(event.target.value);
+	const onSubmit=(event)=>{
+		event.preventDefault()
+		if(todo===""){
+			return;
+		}
+		setTodo("");
+		setTodos((currentArray)=>[todo,...currentArray]);
+	};
 
-function App() {
-	const [value,setValue] = useState(0);
-	const [key,setKey]=useState("");
-	const onClick=()=>setValue((prev)=>prev+1);
-	const onChange=(event)=>setKey(event.target.value);
-
-	useEffect(()=>{
-		console.log("I run only once");
-	},[]);
-	useEffect(()=>{
-		console.log("I run when 'key' changes");
-	},[key]);
-	useEffect(()=>{
-		console.log("I run when 'value' changes");
-	},[value]);
-  return (
-    <div>
-		 <input 
-			 value={key}
-			 type="text" 
-			 placeholder="Search"
-			 onChange={onChange}></input>
-		<h1 id={styles.title}>{value}</h1>
-		<Button text={"Click"} onClick={onClick}></Button>
-	</div>
-  );
+	return(
+		<div>
+			<h1>To Do List ({todos.length})</h1>
+			<form onSubmit={onSubmit}>
+				<input 
+					type="text"
+					placeholder="Write your todo!"
+					onChange={onChange}
+					value={todo}>
+				</input>
+				<button>Add To Do</button>
+			</form>
+			<hr />
+			<ul>
+				{todos.map((item,index)=><li key={index}>{item}</li>)}
+			</ul>
+		</div>
+	)
 }
 
 export default App;
