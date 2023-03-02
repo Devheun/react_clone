@@ -65,3 +65,30 @@ MemoryBtn.propTypes = {
 - 여기서 말하는 스타일은 className이나 id로 import한 스타일 객체의 property를 전달하여 적용된다.
 
 - 스타일이 적용된 컴포넌트를 확인해보면 무작위의 className이나 id가 붙는데, 이는 일일이 .css 파일의 className이나 id를 기억할 필요가 없다는 말!
+
+- state를 변경할 때 기존 하던 방식은 모든 코드들이 렌더링이 되는데, 첫 번째 렌더링만 실행하고 이후 state 변화를 없게 하려면 ?
+
+- useEffect()를 이용한다 !
+
+- useEffect()는 두개의 argument를 가지는데, 첫번째 argument는 우리가 한번만 실행할 코드, 두번째 argument는 [] 배열(dependencies)을 넣어줌.
+
+- useEffect()의 두번째 argument의 []에 값을 넣으면 그 값이 변화될때만 첫번째 argument의 코드들이 실행된다.
+
+- 컴포넌트가 destroy 될 때도 코드로 실행할 수 있는데, useEffect()에서 return 에다가 코드를 넣으면 실행된다. (clean-up)
+
+- state는 직접적으로 수정 불가능하여 state를 수정하는 함수로 수정을 해야한다.
+
+- 예를 들어 array state에 다른 element를 추가한다고 하면
+
+```
+const [todos,setTodos]=useState([]);
+setTodos((current)=>[todo,...current]);
+```
+
+- then 대신 async-await를 보편적으로 이용한다.
+
+- map 함수를 사용할 때 key값(고유값)을 입력 해주어야 한다.
+
+- react는 route(page) 단위로 생각하고 만들어야한다.
+
+- Route를 만들면 그 안에 넣어준게 렌더링 된다.
