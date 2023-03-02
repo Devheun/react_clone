@@ -14,6 +14,9 @@ function App(){
 		setTodo("");
 		setTodos((currentArray)=>[todo,...currentArray]);
 	};
+	const deleteTodo=(index)=>{
+		setTodos((currentArray)=>currentArray.filter((_,curIndex)=>curIndex!==index));
+	}
 
 	return(
 		<div>
@@ -29,7 +32,8 @@ function App(){
 			</form>
 			<hr />
 			<ul>
-				{todos.map((item,index)=><li key={index}>{item}</li>)}
+				{todos.map((item,index)=><li key={index}>{item}
+				<button onClick={()=>deleteTodo(index)}>❌</button></li>)}
 			</ul>
 		</div>
 	)
