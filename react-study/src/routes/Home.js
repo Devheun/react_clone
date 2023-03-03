@@ -24,6 +24,7 @@ function Home(){
 			<div>
 				 {movies.map((movie)=>(
 					<Movie
+						id={movie.id}
 						key={movie.id}
 						medium_cover_image={movie.medium_cover_image}
 						title={movie.title}

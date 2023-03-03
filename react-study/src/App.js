@@ -15,7 +15,7 @@ function App(){
 					<h1>You can do it !</h1>
 				</Route>
 				
-				<Route path="/movie">
+				<Route path="/movie/:id">
 					<Detail />
 				</Route>
 				
