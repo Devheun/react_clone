@@ -1,6 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useEffect,useState} from "react";
-import Movie from "../components/Movie";
+import Details from "../components/Details";
 
 function Detail(){
 	
@@ -20,17 +20,19 @@ function Detail(){
 		getMovie();
 	},[id]);
 	
-	
 	return (
 		<div>
 			<div>{load ? <h1>loading...</h1>:
 				(
 					<div>
-						<Movie
+						<Details
 						id={detail.id}
-						medium_cover_image={detail.medium_cover_image}
+						cover_img={detail.medium_cover_image}
 						title={detail.title}
-						genres={detail.genres}/>
+						year={detail.year}
+						rating={detail.rating}
+						genres={detail.genres}
+						description={detail.description_intro}/>
 					</div>
 				)}</div>
 		</div>

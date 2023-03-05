@@ -1,0 +1,30 @@
+.movie{
+  background-color: silver;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) 2fr;
+  grid-gap: 20px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.title{
+	width:1000px;
+	height:100px;
+}
+
+.title h2{
+	display:inline;
+}
+
+.title h4{
+	margin-left:100px;
+	display:inline;
+}
+
+.desc{
+	margin-top:100px;
+	margin-bottom:100px;
+}
