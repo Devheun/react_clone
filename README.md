@@ -1,6 +1,8 @@
 # react_clone
 Making movie web service with react ( nomadcoder clone )
 
+result : https://devheun.github.io/react_clone/
+
 <h2>Lecture summary</h2>
 
 - js는 html -> js 순서라면 react는 js -> html 순서이다.
