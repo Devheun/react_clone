@@ -1,6 +1,8 @@
 # react_clone
 Making movie web service with react ( nomadcoder clone )
 
+result : https://devheun.github.io/react_clone/
+
 <h2>Lecture summary</h2>
 
 - js는 html -> js 순서라면 react는 js -> html 순서이다.
@@ -92,5 +94,8 @@ setTodos((current)=>[todo,...current]);
 - react는 route(page) 단위로 생각하고 만들어야한다.
 
 - Route를 만들면 그 안에 넣어준게 렌더링 된다.
+<<<<<<< HEAD
 
 - useParams를 이용하여 파라미터를 가져올 수 있다. 
+=======
+>>>>>>> 0339ce43c284c17883881cc207a7bf7cdd4e9112
